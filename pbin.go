@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 )
 
-
 var (
 	use_stdin		bool
 	paste_private	bool
@@ -58,7 +57,7 @@ minutes  Expire in 10 minutes
 	if expire_time, ok := expire_times[paste_expire]; ok {
 		values.Add("api_paste_expire", expire_time)
 	} else {
-		println("Invalid paste expiration time (-help for details)")
+		println("Invalid paste expiration time (see -help for details)")
 		return
 	}
 
